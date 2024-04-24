@@ -1,0 +1,14 @@
+service: tom-cohort-5
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  delfrinandoapi:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
