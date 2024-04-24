@@ -7,8 +7,18 @@ provider:
 
 functions:
   delfrinandoapi:
-    handler: index.handler
+    handler: index.pranata
     events:
       - httpApi:
           path: /
           method: get
+
+  pranatapost:
+    handler: index.pranatapost
+    events:
+      - httpApi:
+          path: /pranata
+          method: post
+
+plugins:
+  - serverless-offline
